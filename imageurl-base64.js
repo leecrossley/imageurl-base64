@@ -1,5 +1,4 @@
-var BufferList = require("bufferlist").BufferList,
-    request = require("request");
+var request = require("request");
 
 exports.imgUrlToBase64 = function (url, callback) {
     var options = {
