@@ -1,0 +1,25 @@
+{
+  "name": "imageurl-base64",
+  "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
+  "description": "Convert an image from a url to base64",
+  "homepage": "http://ilee.co.uk",
+  "version": "0.1.0",
+  "main": "imageurl-base64.js",
+  "keywords": [
+    "image",
+    "base64",
+    "url",
+    "uri"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leecrossley/imageurl-base64.git"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "dependencies": {
+    "bufferlist": "~0.1.x",
+    "request": "~2.36.x"
+  }
+}
