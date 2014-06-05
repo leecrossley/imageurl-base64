@@ -1,6 +1,6 @@
 var request = require("request");
 
-exports = function (url, callback) {
+var i2b = function (url, callback) {
     var options = {
         uri: url,
         encoding: "binary"
@@ -15,3 +15,10 @@ exports = function (url, callback) {
         return callback();
     });
 };
+
+if (typeof (exports) !== "undefined") {
+    if (typeof (module) !== "undefined" && module.exports) {
+        exports = module.exports = i2b;
+    }
+    exports.i2b = i2b;
+}
