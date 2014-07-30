@@ -19,6 +19,6 @@
     "node": ">= 0.10.x"
   },
   "dependencies": {
-    "request": "~2.36.x"
+    "request": "~2.36.0"
   }
 }
