@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Convert an image from a url to base64",
   "homepage": "http://ilee.co.uk",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "imageurl-base64.js",
   "keywords": [
     "image",
@@ -19,6 +19,6 @@
     "node": ">= 0.10.x"
   },
   "dependencies": {
-    "request": "~2.40.x"
+    "request": "~2.44.x"
   }
 }
