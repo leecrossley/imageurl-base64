@@ -9,13 +9,25 @@ var i2b = function (url, callback) {
     };
 
     return request(options, function(e, resp, body) {
-        if (!e && resp.statusCode === 200) {
-            var prefix = "data:" + resp.headers["content-type"] + ";base64,";
-            var img = new Buffer(body.toString(), "binary").toString("base64");
-            return callback(prefix + img);
+        if (e) {
+            return callback(e);
         }
 
-        return callback();
+        if (resp.statusCode !== 200) {
+            var error = new Error('response was non 200');
+            error.response = body;
+            return callback(error);
+        }
+
+        var prefix = "data:" + resp.headers["content-type"] + ";base64,";
+        var img = new Buffer(body.toString(), "binary").toString("base64");
+
+        return callback(null, {
+            mimeType: resp.headers["content-type"],
+            base64: img,
+            dataUri: prefix + img
+        });
+
     });
 };
 
